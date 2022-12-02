@@ -1,23 +1,11 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import { useContext } from 'react';
+import { UserContext } from '../lib/UserContext';
+import Loading from '../components/loading';
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => {
+  const [user] = useContext(UserContext);
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
+  return <>{user?.loading ? <Loading /> : user?.issuer && <div>You're logged in!</div>}</>;
+};
 
-      <Footer />
-    </div>
-  )
-}
+export default Home;

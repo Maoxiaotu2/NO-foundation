@@ -1,16 +1,22 @@
 {
-  "name": "next-netlify-starter",
-  "version": "0.5.0",
-  "private": true,
+  "name": "magic-nextjs",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
-    "export": "next export"
+    "start": "next start"
   },
   "dependencies": {
-    "cypress": "^10.0.3",
-    "next": "^12.1.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@magic-ext/oauth": "^0.7.0",
+    "@magic-sdk/admin": "1.3.0",
+    "@magiclabs/ui": "0.6.1",
+    "magic-sdk": "^4.0.0",
+    "next": "latest",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "framer-motion": "^2.3.0",
+    "rxjs": "^6.6.2"
   }
 }
